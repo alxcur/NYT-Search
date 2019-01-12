@@ -1,73 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>New York Times Search</title>
-  </head>
-  <body>
-    <div class="container"><br>
-<div class="p-3 mb-2 bg-dark text-white">New York Times Search</div>
-
-      <div class="card">
-        <div class="card-header">
-          Search Parameters
-        </div>
-        <div class="card-body">
-        <form>
-            <div class="form-group">
-              <label for="inputSearch">Search</label>
-              <input type="search" class="form-control" id="queryInputElem">
-            </div>
-            <div class="form-group">
-              <label for="inputNumber">Number of Records to Retrieve:</label>
-              <select class="form-control" id="articleNumElem">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-          </select>
-            </div>
-            <div class="form-group">
-                <label for="inputStartYear">Start Year (optional)</label>
-                <input type="startYear" class="form-control" id="startYearElem">
-              </div>
-              <div class="form-group">
-                <label for="inputEndYear">End Year (optional)</label>
-                <input type="endYear" class="form-control" id="endYearElem">
-              </div>
-              <button type="button" class="btn btn-primary btn-sm">Submit</button>
-<button type="button" class="btn btn-secondary btn-sm">Clear Results</button>
-          </form> 
-        </div>
-        </div><br>
-        <div class="card">
-        <div class="card-header">
-          Top Articles
-        </div>
-        <div class="card-body">
-
-        </div>
-      </div>
-    </div>
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+ <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Hello, world!</title>
+ </head>
+ <body>
+   <div class="container"><br>
+<div class="headerElem"><h1>New York Times Search</h1></div>
+     <div class="card">
+       <div class="card-header">
+         Search Parameters
+       </div>
+       <div class="card-body">
+       <form>
+           <div class="form-group">
+             <label for="inputSearch">Search</label>
+             <input value= "machine learning" type="search" class="form-control" id="queryInputElem">
+           </div>
+           <div class="form-group">
+             <label for="inputNumber">Number of Records to Retrieve:</label>
+             <select class="form-control" id="articleNumElem">
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+                 <option value="7">7</option>
+                 <option value="8">8</option>
+                 <option value="9">9</option>
+                 <option value="10">10</option>
+         </select>
+           </div>
+           <div class="form-group">
+               <label for="inputStartYear">Start Year (optional)</label>
+               <input value="20160101" type="startYear" class="form-control" id="startYearElem">
+             </div>
+             <div class="form-group">
+               <label for="inputEndYear">End Year (optional)</label>
+               <input value="20190101" type="endYear" class="form-control" id="endYearElem">
+             </div>
+             <button type="button" id="searchButton" class="btn btn-primary btn-sm">Submit</button>
+<button type="button" id="clearButton" class="btn btn-secondary btn-sm">Clear Results</button>
+         </form>
+       </div>
+       </div><br>
+       <div class="card">
+       <div class="card-header">
+         Top Articles
+       </div>
+       <div id= "searches" class="card-body">
+       </div>
+     </div>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+    $("#searchButton").click(function() {
+      $("#searches").empty();
+      var numOfRecords = $("#articleNumElem").val();
+       var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+       queryURL += "?" + $.param({
+           "api-key": "52c04e8b9e7442e0a6c683a5b9387189",
+           "q": $("#queryInputElem").val(),   //this is the query
+           "begin_date": $("#startYearElem").val(),   //optional begin dat 
+           "end_date": $("#endYearElem").val()      
+            //optional end date
+           //might have to put date into YYYYMMDD format
+       });
+       
+       $.ajax({
+           url: queryURL,
+           method: "GET",
+       })
+           .then(function (response) {
+               // idk ID yet
+               console.log(response);
+               console.log(numOfRecords);
+              for (i = 0; i < numOfRecords; i++) {
+                console.log("looping");
+                $("#searches").append(`<div> <a href=${response.response.docs[i].web_url}> ${response.response.docs[i].headline.main} </a> </div> <br>`)
+                
+              }
+               //then getting the response
+               //put the obj paths in variables for readability
+           });
+});
+      $("clearButton").click(function() {
+        $("#queryInputElem").empty();
+        $("#startYearElem").empty();
+        $("#endYearElem").empty();
+        $("#searches").empty();
+      })
+       //also make a clearResults button idk ID yet
+       // Built by LucyBot. www.lucybot.com
+   </script>
+</body>
 </html>
